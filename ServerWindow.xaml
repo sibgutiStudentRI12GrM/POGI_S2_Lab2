@@ -1,0 +1,35 @@
+﻿<Window x:Class="lab2.ServerWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:lab2"
+        mc:Ignorable="d"
+        Title="Server" Height="450" Width="600">
+    <Grid x:Name="Container" Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*"></RowDefinition>
+            <RowDefinition Height="70*"></RowDefinition>
+            <RowDefinition Height="10*"></RowDefinition>
+            <RowDefinition Height="10*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Label Grid.Row="0" Grid.ColumnSpan="4" Content="SEREVER LOG:" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20"></Label>
+        <ListBox Grid.Row="1" Grid.ColumnSpan="4" x:Name="ListBox_ServerLog" Background="#FFE6E6E6"></ListBox>
+
+        <Label Grid.Row="2" Grid.Column="0" Content="Port:" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="16"></Label>
+        <TextBox Grid.Row="2" Grid.Column="1" x:Name="TextBox_Port" Text="8888" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="5" FontSize="16"></TextBox>
+        <Label Grid.Row="2" Grid.Column="2" Content="Ip: " VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="16"></Label>
+        <TextBox Grid.Row="2" Grid.Column="3" x:Name="TextBox_Ip" Text="127.0.0.1" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="5" FontSize="16"></TextBox>
+
+        <Label Grid.Row="3" Grid.Column="0" Content="Server status:" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16"></Label>
+        <Label Grid.Row="3" Grid.Column="1" x:Name="Label_ServerStatus" Content="OFFLINE" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16"></Label>
+        <Button Grid.Row="3" Grid.Column="2" x:Name="Btn_StartServer" Content="Run server" Margin="5" Click="Btn_StartServer_Click"></Button>
+        <Button Grid.Row="3" Grid.Column="3" x:Name="Btn_StopServer" Content="Stop server" Margin="5"  IsEnabled="False" Click="Btn_StopServer_Click"></Button>
+    </Grid>
+</Window>
